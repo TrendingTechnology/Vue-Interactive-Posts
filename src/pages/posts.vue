@@ -59,9 +59,7 @@ export default {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  .post {
-    height: 600px;
-  }
+
   input {
     width: 60%;
   }
