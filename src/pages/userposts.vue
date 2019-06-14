@@ -19,7 +19,8 @@ import post from "@/components/post/post.vue";
 export default {
   data() {
     return {
-      posts: []
+      posts: [],
+      id:this.$route.params.id
     };
   },
   computed: {
@@ -27,7 +28,7 @@ export default {
       return this.posts;
     },
     getposts() {
-      this.$http.get("https://jsonplaceholder.typicode.com/posts").then(
+      this.$http.get(`https://jsonplaceholder.typicode.com/posts?userId=${this.id}`).then(
         function(response) {
           this.posts = response.data;
         },
